@@ -17,5 +17,13 @@ namespace Project1
 		{
 			
 		}
+
+		[Test]
+		public static void NetCoreFailedTest()
+		{
+			#if NETCOREAPP
+			Assert.Fail("Failed under netcore");
+			#endif
+		}
 	}
 }
